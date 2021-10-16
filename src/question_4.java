@@ -136,18 +136,131 @@ public class question_4 {
 //			System.out.print(i%10);
 //		}
 		
-		System.out.println("練習問題4-11");
+//		System.out.println("練習問題4-12");
+//		BufferedReader br = new BufferedReader(
+//              new InputStreamReader( System.in ) );
+//		int sum=0;
+//		while(sum<=100) {
+//			System.out.println("合計が100を超えるまで数字を入力してください(現在の合計は" + sum  + "です）");
+//			sum += Integer.parseInt( br.readLine() );
+//			if(sum>100) {
+//				System.out.println("合計が100を超えました(現在の合計は" + sum + ")です");
+//			}
+//		}
+		
+//		System.out.println("練習問題4-13");
+//		BufferedReader br = new BufferedReader(
+//              new InputStreamReader( System.in ) );
+//		System.out.println("ストライク=1 or ボール=2");
+//		int strike = 0;
+//		int ball =0;
+//		while( strike<3 && ball<4) {
+//			int x = Integer.parseInt( br.readLine() );
+//			if(x==1) {
+//				strike++;
+//				System.out.println(strike + "ストライク");
+//			}
+//			else if(x==2) {
+//				ball++;
+//				System.out.println(ball + "ボール");
+//			}
+//			else {
+//				System.out.println("1か2を入力してください");
+//			}
+//		}
+//		System.out.println(ball + "ボール、" + strike + "ストライクで打者交代");
+		
+//		System.out.println("練習問題4-14");
+//		BufferedReader br = new BufferedReader(
+//              new InputStreamReader( System.in ) );
+//		System.out.println("ストライク=1 or ボール=2 or ファウル=3");
+//		int strike = 0;
+//		int ball =0;
+//		int foal=0;
+//		while( strike<3 && ball<4) {
+//			int x = Integer.parseInt( br.readLine() );
+//			if(x==1) {
+//				strike++;
+//				System.out.println(strike + "ストライク");
+//			}
+//			else if(x==2) {
+//				ball++;
+//				System.out.println(ball + "ボール");
+//			}
+//			else if(x==3 && strike<2) {
+//				strike++;
+//				System.out.println(strike + "ストライク");
+//			}
+//			else if(x==3 && strike==2) {
+//				System.out.println("ファウル（2ストライクのためカウントストップ）");
+//			}
+//			else {
+//				System.out.println("1か2か3を入力してください");
+//			}
+//		}
+//		System.out.println(ball + "ボール、" + strike + "ストライクで打者交代");
+		
+//		System.out.println("練習問題4-15");
+//		BufferedReader br = new BufferedReader(
+//              new InputStreamReader( System.in ) );
+//		System.out.println("入力された数字が素数かを判定します");
+//		int x = Integer.parseInt( br.readLine() );
+//		int i;
+//		for(i=2; i<=(x/2); i++) {
+//			if(x%i==0) {
+//				break;
+//			}
+//		}
+//		if(i>(x/2)){
+//			System.out.println("入力された数字は素数です");
+//		}
+//		else {
+//			System.out.println("入力された数字は素数ではありません");
+//		}
+//		
+//		System.out.println("練習問題4-16");
+		
+//		System.out.println("練習問題4-17");
+//		for(int x=1; x<=9; x++) {
+//			for(int y=1; y<=9; y++) {
+//				System.out.printf("%2d,",x*y);
+//			}
+		
+//		System.out.println("練習問題4-18");
+//		BufferedReader br = new BufferedReader(
+//              new InputStreamReader( System.in ) );
+//		System.out.println("数字を入力してください。0を入力するとその時点での合計値が出力されます。");
+//		int x;
+//		int sum=0;
+//		for(;;) {
+//			x = Integer.parseInt( br.readLine() );
+//			sum+=x;
+//			if(x==0) {
+//				break;
+//			}
+//		}
+//		System.out.println("合計値は" + sum + "です");
+		
+		System.out.println("練習問題4-19");
 		BufferedReader br = new BufferedReader(
               new InputStreamReader( System.in ) );
+		System.out.println("数字を入力してください。0を入力するとその時点での合計値の平均が出力されます。");
+		int x;
 		int sum=0;
-		while(sum<=100) {
-			System.out.println("合計が100を超えるまで数字を入力してください(現在の合計は" + sum  + "です）");
-			sum += Integer.parseInt( br.readLine() );
-			if(sum>100) {
-				System.out.println("合計が100を超えました(現在の合計は" + sum + ")です");
+		int count=1;
+		for(;;) {
+			x = Integer.parseInt( br.readLine() );
+			if(x==0 && count==1) {
+				System.out.println("少なくとも1回は数字を入力してください");
+			}
+			else if(x==0){
+				break;
+			}
+			else{
+				sum+=x;
+				count++;
 			}
 		}
-		
-		
+		System.out.println("合計値の平均は" + (sum/(count-1)) + "です");
 	}
 }
