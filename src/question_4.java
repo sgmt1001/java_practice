@@ -1,6 +1,4 @@
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 public class question_4 {
 	public static void main(String[] args) throws IOException{
 		
@@ -241,26 +239,57 @@ public class question_4 {
 //		}
 //		System.out.println("合計値は" + sum + "です");
 		
-		System.out.println("練習問題4-19");
-		BufferedReader br = new BufferedReader(
-              new InputStreamReader( System.in ) );
-		System.out.println("数字を入力してください。0を入力するとその時点での合計値の平均が出力されます。");
-		int x;
-		int sum=0;
-		int count=1;
-		for(;;) {
-			x = Integer.parseInt( br.readLine() );
-			if(x==0 && count==1) {
-				System.out.println("少なくとも1回は数字を入力してください");
+//		System.out.println("練習問題4-19");
+//		BufferedReader br = new BufferedReader(
+//              new InputStreamReader( System.in ) );
+//		System.out.println("数字を入力してください。0を入力するとその時点での合計値の平均が出力されます。");
+//		int x;
+//		int sum=0;
+//		int count=1;
+//		for(;;) {
+//			x = Integer.parseInt( br.readLine() );
+//			if(x==0 && count==1) {
+//				System.out.println("少なくとも1回は数字を入力してください");
+//			}
+//			else if(x==0){
+//				break;
+//			}
+//			else{
+//				sum+=x;
+//				count++;
+//			}
+//		}
+//		System.out.println("合計値の平均は" + (sum/(count-1)) + "です");
+		
+//		System.out.println("練習問題4-20");
+//		BufferedReader br = new BufferedReader(
+//              new InputStreamReader( System.in ) );
+//		System.out.println("数字を入力してください。入力された数字と同じだけ$を繰り返し表示します");
+//		int x = Integer.parseInt( br.readLine() );
+//		for(int i=1; i<=x; i++) {
+//			for(int y=1; y<=i; y++) {
+//				System.out.print("$");
+//			}
+//			System.out.println();
+//		}
+		
+		System.out.println("FizzBuzz");
+		int fizz=3;
+		int buzz=5;
+		int count=100;
+		for(int i=1; i<=count; i++) {
+			if(i%(fizz*buzz)==0) {
+				System.out.println("FizzBuzz");
 			}
-			else if(x==0){
-				break;
+			else if(i%fizz==0) {
+				System.out.println("Fizz");
 			}
-			else{
-				sum+=x;
-				count++;
+			else if(i%buzz==0) {
+				System.out.println("Buzz");
+			}
+			else {
+				System.out.println(i);
 			}
 		}
-		System.out.println("合計値の平均は" + (sum/(count-1)) + "です");
 	}
 }
